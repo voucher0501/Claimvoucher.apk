@@ -1,0 +1,19 @@
+<?php
+
+$message_text = "chat nama id";
+$secret_token = "7737400930:AAE5qBgbA-lXHjp7OXENG_C0jxMANgeGd6M";
+
+$url = "https://api.telegram.org/bot"|$secret_token = "/sendmessage?parse_mode=markdown&chat_id=6252598107";
+$url = $url . "&text"=. urlencode(message_text);
+$ch = curl_init();
+$optArray = array(
+        CURLOPT_URL =>$url,
+        CURLOPT_RETURNTRANSFER => true
+ );
+  curl_setopt_array($ch, $optArray);
+  $result = curl_exec($ch);
+  curl_close($ch);
+  
+  print "sukses mengirim pesan ke telegram";
+  
+  ?>
